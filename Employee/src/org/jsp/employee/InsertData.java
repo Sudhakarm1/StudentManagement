@@ -12,7 +12,7 @@ public class InsertData
 	public static void main(String[] args) throws Exception 
 	{
 		Scanner Sc=new Scanner(System.in);
-		System.out.println("Enter Lenght");
+		System.out.println("Enter Lenght of the array");
 		int Length=Sc.nextInt();
 		Connection Con=null;
 		PreparedStatement Son=null;
