@@ -6,7 +6,7 @@ public class MainStudentManagement {
 	public static void main(String[] args) {
 		Scanner Sc = new Scanner(System.in);
 		StudentManagement SM = new StudentManagement();
-		System.out.println("STUDENT MANAGEMENT SYSTEM");
+		System.out.println("<<<<<<<<<<<<<<<<STUDENT MANAGEMENT SYSTEM>>>>>>>>>>>>>>>");
 		System.out.println("------------------------------");
 		while (true) {
 			System.out.println("Please Choose from Given Options");
