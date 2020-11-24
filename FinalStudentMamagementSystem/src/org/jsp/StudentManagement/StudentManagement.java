@@ -26,6 +26,8 @@ public class StudentManagement {
 			Con = DriverManager.getConnection(Pro.getProperty("url"), Pro);
 			Ptsm = Con.createStatement();
 			R = Ptsm.executeQuery("SELECT * from student_management_system");
+			System.out.println(
+					"-------------------------------------------------------------------------------------------------------------------------------------");
 			System.out.println("S_Id" + "\t\t" + "S_Fname" + "\t\t" + "S_Lname" + "\t\t" + "S_Gendar" + "\t\t"
 					+ "S_RegNo" + "\t\t" + "S_Fees" + "\t\t" + "S_MobileNo" + "\t\t" + "S_Address");
 			System.out.println(
@@ -58,20 +60,26 @@ public class StudentManagement {
 			Class.forName(Pro.getProperty("driver"));
 			Con = DriverManager.getConnection(Pro.getProperty("url"), Pro);
 			Ptsm = Con.prepareStatement("INSERT INTO student_management_system VALUES(?,?,?,?,?,?,?,?)");
-			System.out.println("Enter Number of Rows YOu want to Insert:");
+			System.out.println("Enter Number of Rows You want to Insert:");
+			System.out.println("-------------------------------------------");
 			int Length = Sc.nextInt();
 			// S_Id, S_Fname, S_Lname, S_Gendar, S_MobileNo, S_Fees, S_Address
 			for (int i = 0; i < Length; i++) {
 				System.out.println("Enter Student ID");
 				int Id = Sc.nextInt();
+				System.out.println("-------------------------------------------");
 				System.out.println("Enter Student First Name");
 				String Fname = Sc.next();
+				System.out.println("-------------------------------------------");
 				System.out.println("Enter Student Last Name");
 				String Lname = Sc.next();
+				System.out.println("-------------------------------------------");
 				System.out.println("Enter Student Gender(F/M)");
 				String Gen = Sc.next();
+				System.out.println("-------------------------------------------");
 				System.out.println("Enter Student Mobile Number(Should Be 10 Digit)");
 				long Mno = Sc.nextLong();
+				System.out.println("-------------------------------------------");
 				String MobileNumber = Mno + "";
 				if (MobileNumber.length() == 10) {
 					System.out.println("Accepted");
@@ -119,18 +127,22 @@ public class StudentManagement {
 			Class.forName(Pro.getProperty("driver"));
 			Con = DriverManager.getConnection(Pro.getProperty("url"), Pro);
 			System.out.println("which Column You are Going to use Operation");
+			System.out.println("-------------------------------------------");
 			System.out.println("1.ID");
 			System.out.println("2.Mobile Number");
 			System.out.println("3.Register Number");
 			System.out.println("4.First Name");
 			System.out.println("5.Address");
+			System.out.println("-------------------------------------------");
 			int Ch = Sc.nextInt();
 			switch (Ch) {
 			// Update ID Method
 			case 1:
 				System.out.println("Please Enter Student ID");
 				int ID = Sc.nextInt();
+				System.out.println("-------------------------------------");
 				System.out.println("Which Colum You are going to Update");
+				System.out.println("-------------------------------------");
 				System.out.println("1.Fee");
 				System.out.println("2.Register Number");
 				System.out.println("3.First Name");
@@ -138,6 +150,7 @@ public class StudentManagement {
 				System.out.println("5.Gender");
 				System.out.println("6..Address");
 				System.out.println("7.Mobile Number");
+				System.out.println("------------------------------------");
 				int Ch1 = Sc.nextInt();
 				switch (Ch1) {
 				case 1:
@@ -593,6 +606,8 @@ public class StudentManagement {
 				Psm = Con.prepareStatement(Str);
 				Psm.setString(1, Name);
 				Num = Psm.executeQuery();
+				System.out.println(
+						"-------------------------------------------------------------------------------------------------------------------------------------");
 				System.out.println("S_Id" + "\t\t" + "S_Fname" + "\t\t" + "S_Lname" + "\t\t" + "S_Gendar" + "\t\t"
 						+ "S_RegNo" + "\t\t" + "S_Fees" + "\t\t" + "S_MobileNo" + "\t\t" + "S_Address");
 				System.out.println(
@@ -612,6 +627,8 @@ public class StudentManagement {
 				Psm = Con.prepareStatement(Str1);
 				Psm.setString(1, LName);
 				Num = Psm.executeQuery();
+				System.out.println(
+						"-------------------------------------------------------------------------------------------------------------------------------------");
 				System.out.println("S_Id" + "\t\t" + "S_Fname" + "\t\t" + "S_Lname" + "\t\t" + "S_Gendar" + "\t\t"
 						+ "S_RegNo" + "\t\t" + "S_Fees" + "\t\t" + "S_MobileNo" + "\t\t" + "S_Address");
 				System.out.println(
@@ -629,6 +646,8 @@ public class StudentManagement {
 				int Mobil = Sc.nextInt();
 				Ptsm = Con.createStatement();
 				Num = Ptsm.executeQuery("SELECT * FROM student_management_system " + "WHERE S_MobileNo=" + Mobil);
+				System.out.println(
+						"-------------------------------------------------------------------------------------------------------------------------------------");
 				System.out.println("S_Id" + "\t\t" + "S_Fname" + "\t\t" + "S_Lname" + "\t\t" + "S_Gendar" + "\t\t"
 						+ "S_RegNo" + "\t\t" + "S_Fees" + "\t\t" + "S_MobileNo" + "\t\t" + "S_Address");
 				System.out.println(
@@ -648,6 +667,8 @@ public class StudentManagement {
 				Psm = Con.prepareStatement(Str3);
 				Psm.setString(1, S_Address);
 				Num = Psm.executeQuery();
+				System.out.println(
+						"-------------------------------------------------------------------------------------------------------------------------------------");
 				System.out.println("S_Id" + "\t\t" + "S_Fname" + "\t\t" + "S_Lname" + "\t\t" + "S_Gendar" + "\t\t"
 						+ "S_RegNo" + "\t\t" + "S_Fees" + "\t\t" + "S_MobileNo" + "\t\t" + "S_Address");
 				System.out.println(

@@ -6,16 +6,18 @@ public class MainStudentManagement {
 	public static void main(String[] args) {
 		Scanner Sc = new Scanner(System.in);
 		StudentManagement SM = new StudentManagement();
-		System.out.println("<<<<<<<<<<<<<<<<STUDENT MANAGEMENT SYSTEM>>>>>>>>>>>>>>>");
-		System.out.println("------------------------------");
+		System.out.println("                 WELCOME TO STUDENT MANAGEMENT SYSTEM                   ");
+		System.out.println("=========================================================================");
 		while (true) {
-			System.out.println("Please Choose from Given Options");
+			System.out.println("PLEASE CHOOSE FROM GIVEN OPTIONS :");
+			System.out.println("---------------------------------");
 			System.out.println("1.Insert Rows");
 			System.out.println("2.Display Table");
 			System.out.println("3.Update Rows");
 			System.out.println("4.Detete Rows");
 			System.out.println("5.Exit");
 			System.out.println("6.Search");
+			System.out.println("---------------------------------");
 			int Num = Sc.nextInt();
 			try {
 				switch (Num) {
