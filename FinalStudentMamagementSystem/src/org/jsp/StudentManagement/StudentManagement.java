@@ -518,8 +518,8 @@ public class StudentManagement {
 			System.out.println("1.ID");
 			System.out.println("2.Mobile Number");
 			System.out.println("3.Register Number");
-			System.out.println("4.First Name");
-			System.out.println("5.Address");
+			// System.out.println("4.First Name");
+			// System.out.println("4.Address");
 			int Ch = Sc.nextInt();
 			switch (Ch) {
 			case 1:
@@ -540,28 +540,23 @@ public class StudentManagement {
 				Ptsm = Con.prepareStatement("DELETE FROM student_management_system " + "WHERE S_RegNo=" + RegNo);
 				number = Ptsm.executeUpdate();
 				break;
-			case 4:
-				String Str = "DELETE FROM student_management_system " + "WHERE S_Fname= ?";
-				System.out.println("Please Enter Student Register Number");
-				String Fname = Sc.next();
-				Psm = Con.prepareStatement(Str);
-				Psm.setString(1, Fname);
-				number = Psm.executeUpdate();
-				break;
-			case 5:
-				String Str1 = "DELETE FROM student_management_system " + "WHERE S_Address= ?";
-				System.out.println("Please Enter Student Address");
-				String Add = Sc.next();
-				Psm = Con.prepareStatement(Str1);
-				Psm.setString(1, Add);
-				number = Psm.executeUpdate();
-				break;
+			/*
+			 * case 4: String Str = "DELETE FROM student_management_system " +
+			 * "WHERE S_Fname= ?";
+			 * System.out.println("Please Enter Student Register Number"); String Fname =
+			 * Sc.next(); Psm = Con.prepareStatement(Str); Psm.setString(1, Fname); number =
+			 * Psm.executeUpdate(); break; case 4: String Str1 =
+			 * "DELETE FROM student_management_system " + "WHERE S_Address= ?";
+			 * System.out.println("Please Enter Student Address"); String Add = Sc.next();
+			 * Psm = Con.prepareStatement(Str1); Psm.setString(1, Add); number =
+			 * Psm.executeUpdate(); break;
+			 */
 			}
 			if (number == 0) {
+				System.out.println("0 row Affected");
+			} else {
 				System.out.println("Successfully Deleted row Affected");
 				Display();
-			} else {
-				System.out.println("0 row Affected");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -605,7 +600,7 @@ public class StudentManagement {
 				while (Num.next()) {
 					System.out.println(Num.getInt(1) + "\t\t" + Num.getString(2) + "\t\t" + Num.getString(3) + "\t\t"
 							+ Num.getString(4) + "\t\t\t" + Num.getInt(5) + "\t\t" + Num.getDouble(6) + "\t\t"
-							+ Num.getInt(8) + "\t\t" + Num.getLong(7));
+							+ Num.getLong(8) + "\t\t" + Num.getString(7));
 				}
 				System.out.println(
 						"-------------------------------------------------------------------------------------------------------------------------------------");
@@ -624,7 +619,7 @@ public class StudentManagement {
 				while (Num.next()) {
 					System.out.println(Num.getInt(1) + "\t\t" + Num.getString(2) + "\t\t" + Num.getString(3) + "\t\t"
 							+ Num.getString(4) + "\t\t\t" + Num.getInt(5) + "\t\t" + Num.getDouble(6) + "\t\t"
-							+ Num.getInt(8) + "\t\t" + Num.getLong(7));
+							+ Num.getLong(8) + "\t\t" + Num.getString(7));
 				}
 				System.out.println(
 						"-------------------------------------------------------------------------------------------------------------------------------------");
@@ -641,7 +636,7 @@ public class StudentManagement {
 				while (Num.next()) {
 					System.out.println(Num.getInt(1) + "\t\t" + Num.getString(2) + "\t\t" + Num.getString(3) + "\t\t"
 							+ Num.getString(4) + "\t\t\t" + Num.getInt(5) + "\t\t" + Num.getDouble(6) + "\t\t"
-							+ Num.getInt(8) + "\t\t" + Num.getLong(7));
+							+ Num.getLong(8) + "\t\t" + Num.getString(7));
 				}
 				System.out.println(
 						"-------------------------------------------------------------------------------------------------------------------------------------");
@@ -660,7 +655,7 @@ public class StudentManagement {
 				while (Num.next()) {
 					System.out.println(Num.getInt(1) + "\t\t" + Num.getString(2) + "\t\t" + Num.getString(3) + "\t\t"
 							+ Num.getString(4) + "\t\t\t" + Num.getInt(5) + "\t\t" + Num.getDouble(6) + "\t\t"
-							+ Num.getInt(8) + "\t\t" + Num.getLong(7));
+							+ Num.getLong(8) + "\t\t" + Num.getString(7));
 				}
 				System.out.println(
 						"-------------------------------------------------------------------------------------------------------------------------------------");
